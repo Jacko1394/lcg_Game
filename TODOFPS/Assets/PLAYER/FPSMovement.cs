@@ -15,7 +15,7 @@ public class FPSMovement : MonoBehaviour {
 	void Start() {
 		topSpeed += 5;
 		cc = GetComponent<CharacterController>();
-		leftRight = transform.rotation.eulerAngles.y;			//Initializes from starting rotation.
+		leftRight = transform.rotation.eulerAngles.y;		//Initializes from starting rotation.
 		Cursor.visible = false;								//Hides mouse.
 	}
 	
@@ -33,9 +33,9 @@ public class FPSMovement : MonoBehaviour {
 		//Gravity/Jumping:
 		if(cc.isGrounded) {
 			if(Input.GetAxis("Jump") != 0f) {
-				fallSpeed = jumpSpeed;				//Applies jump force, if grounded.
+				fallSpeed = jumpSpeed;		//Applies jump force, if grounded.
 			} else {
-				fallSpeed = 0f;						//Not falling/jumping, if grounded & not jumping.
+				fallSpeed = 0f;				//Not falling/jumping, if grounded & not jumping.
 			}
 		} else {
             if (Input.GetAxisRaw("fly") != 0f) {
@@ -57,4 +57,4 @@ public class FPSMovement : MonoBehaviour {
 		//Applies motion to character:
 		cc.Move(moveDirection * Time.deltaTime);
 	}
-}//end of class
+}//END OF FILE

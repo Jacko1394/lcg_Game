@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
-//20th may 2016 start git test
 
 public class GameManager : MonoBehaviour {
 
@@ -12,4 +11,4 @@ public class GameManager : MonoBehaviour {
 			Application.Quit();
 		}
 	}
-}//end of class
+}//END OF FILE
